@@ -1,0 +1,9 @@
+.steps {
+    display: none !important;
+}
+
+@media (min-width: 768px) {
+    .wizard.vertical {
+        left: -11%;
+    }
+}

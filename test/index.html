@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Modelo projeto</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css" rel="stylesheet"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/scss/bd-wizard.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    input[type="radio"]+label span {
+      transition: background .2s,
+        transform .2s;
+    }
+
+    input[type="radio"]+label span:hover,
+    input[type="radio"]+label:hover span {
+      transform: scale(1.2);
+    }
+
+    input[type="radio"]:checked+label span {
+      background-color: #3490DC;
+      box-shadow: 0px 0px 0px 2px white inset;
+    }
+
+    input[type="radio"]:checked+label {
+      color: #3490DC;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="flex items-center bg-gray-800 p-3 flex-wrap">
+    <a href="#" class="p-2 mr-4 inline-flex items-center">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="fill-current text-white h-8 w-8 mr-2">
+        <path
+          d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z" />
+      </svg>
+      <span class="text-xl text-white font-bold uppercase tracking-wide">Sua logo</span>
+    </a>
+    <button
+      class="text-white inline-flex p-3 hover:bg-gray-900 rounded lg:hidden ml-auto hover:text-white outline-none nav-toggler"
+      data-target="#navigation">
+      <i class="material-icons">menu</i>
+    </button>
+    <div class="hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto" id="navigation">
+      <div
+        class="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto">
+        <a href="#"
+          class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white">
+          <span>Home</span>
+        </a>
+        <a href="#"
+          class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white">
+          <span>About</span>
+        </a>
+        <a href="#"
+          class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white">
+          <span>Services</span>
+        </a>
+        <a href="#"
+          class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white">
+          <span>Gallery</span>
+        </a>
+        <a href="#"
+          class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white">
+          <span>Products</span>
+        </a>
+        <a href="#"
+          class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white">
+          <span>Contact Us</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+
+  <form action="../result/api/index.php" method="POST" enctype="multipart/form-data">
+
+
+    <!-- component -->
+    <div class="h-screen w-full flex overflow-hidden select-none bg-gray-200 dark:bg-black rounded-l-lg
+		transition duration-500 ease-in-out overflow-y-auto">
+
+      <main class="my-1 pt-2 pb-2 px-10 flex-1 ">
+        <div class="flex flex-col capitalize text-3xl">
+          <span class="font-semibold">Olá,</span>
+          <span>Faça o teste!</span>
+
+        </div>
+        <div class="flex">
+          <div class="mr-6 w-1/3 mt-8 py-2 flex-shrink-0 flex flex-col bg-white
+				dark:bg-gray-600 rounded-lg">
+            <!-- Card list container -->
+
+            <h3 class="flex items-center pt-1 pb-1 px-8 text-md font-semibold
+					capitalize dark:text-gray-300">
+              <!-- Header -->
+              <span> Que frase a empresa diria se pudesse falar</span>
+
+            </h3>
+
+            <div>
+              <!-- List -->
+
+              <ul class="pt-1 pb-2 px-3 overflow-y-auto">
+
+                <li class="mt-2">
+
+                  <div class="p-3 flex flex-col justify-between
+							dark:bg-gray-200 rounded-lg">
+                    <div class="">
+
+                      <div class="flex items-center mr-4 mb-4 w-full">
+                        <input id="radio-1-1" type="radio" name="radio" class="hidden" />
+                        <label for="radio-1-1" class="flex items-center cursor-pointer text-xs">
+                          <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+                          Regras são feitas para serem quebradas</label>
+                      </div>
+
+                      <div class="flex items-center mr-4 mb-4 w-full">
+                        <input id="radio-1-2" type="radio" name="radio" class="hidden" />
+                        <label for="radio-1-2" class="flex items-center cursor-pointer text-xs">
+                          <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+                          Tudo pode acontecer</label>
+                      </div>
+
+                      <div class="flex items-center mr-4 mb-4 w-full">
+                        <input id="radio-1-3" type="radio" name="radio" class="hidden" />
+                        <label for="radio-1-3" class="flex items-center cursor-pointer text-xs">
+                          <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+                          Onde há vontade há um caminho</label>
+                      </div>
+
+                      <div class="flex items-center mr-4 mb-4 w-full">
+                        <input id="radio-1-4" type="radio" name="radio" class="hidden" />
+                        <label for="radio-1-4" class="flex items-center cursor-pointer text-xs">
+                          <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+                          Ama a teu próximo como a ti mesmso</label>
+                      </div>
+
+                      <div class="flex items-center mr-4 mb-4 w-full">
+                        <input id="radio-1-5" type="radio" name="radio" class="hidden" />
+                        <label for="radio-1-5" class="flex items-center cursor-pointer text-xs">
+                          <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+                          Se pode ser imaginado, poderá ser criado</label>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+              </ul>
+
+              <!-- <a
+						href="/"
+						class="flex justify-center capitalize text-blue-500
+						dark:text-blue-200">
+						<span>see all</span>
+					</a> -->
+
+            </div>
+
+          </div>
+
+          <div class="mr-6 w-1/3 mt-8 py-2 flex-shrink-0 flex flex-col bg-white
+				dark:bg-gray-600 rounded-lg">
+            <!-- Card list container -->
+
+            <h3 class="flex items-center pt-1 pb-1 px-8 text-md font-semibold
+					capitalize dark:text-gray-300">
+              <!-- Header -->
+              <span>Arquétipo Predominante</span>
+
+            </h3>
+
+            <div>
+              <!-- List -->
+
+              <ul class="pt-1 pb-2 px-3 overflow-y-auto">
+
+                <li class="mt-2">
+
+                  <div class="p-3 flex flex-col justify-between
+						 dark:bg-gray-200 rounded-lg">
+                    <div class="">
+
+                      <div class="flex items-center mr-4 mb-4 w-full">
+                        <input id="radio-2-1" type="radio" name="radio2" class="hidden" />
+                        <label for="radio-2-1" class="flex items-center cursor-pointer text-xs">
+                          <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+                          Rebelde que deseja liberdade das regras</label>
+                      </div>
+
+                      <div class="flex items-center mr-4 mb-4 w-full">
+                        <input id="radio-2-2" type="radio" name="radio2" class="hidden" />
+                        <label for="radio-2-2" class="flex items-center cursor-pointer text-xs">
+                          <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+                          Mago que acredita poder fazer o que sonhar</label>
+                      </div>
+
+                      <div class="flex items-center mr-4 mb-4 w-full">
+                        <input id="radio-2-3" type="radio" name="radio2" class="hidden" />
+                        <label for="radio-2-3" class="flex items-center cursor-pointer text-xs">
+                          <span class="w-5 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+                          Herói em busca de excelência e de vencer desafios</label>
+                      </div>
+
+                      <div class="flex items-center mr-4 mb-4 w-full">
+                        <input id="radio-2-4" type="radio" name="radio2" class="hidden" />
+                        <label for="radio-2-4" class="flex items-center cursor-pointer text-xs">
+                          <span class="w-5 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+                          Prestativo movido pelo desejo de ajudar os outros</label>
+                      </div>
+
+                      <div class="flex items-center mr-4 mb-4 w-full">
+                        <input id="radio-2-5" type="radio" name="radio2" class="hidden" />
+                        <label for="radio-2-5" class="flex items-center cursor-pointer text-xs">
+                          <span class="w-5 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+                          Criador que vive na vanguarda inovando sempre</label>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+              </ul>
+
+              <!-- <a
+						href="/"
+						class="flex justify-center capitalize text-blue-500
+						dark:text-blue-200">
+						<span>see all</span>
+					</a> -->
+
+            </div>
+
+          </div>
+
+          <div class="mr-6 w-1/3 mt-8 py-2 flex-shrink-0 flex flex-col bg-white
+          dark:bg-gray-600 rounded-lg">
+            <!-- Card list container -->
+
+            <h3 class="flex items-center pt-1 pb-1 px-8 text-md font-semibold
+            capitalize dark:text-gray-300">
+              <!-- Header -->
+              <span> Qual desejo das pessoas queremos satisfazer</span>
+
+            </h3>
+
+            <div>
+              <!-- List -->
+
+              <ul class="pt-1 pb-2 px-3 overflow-y-auto">
+
+                <li class="mt-2">
+
+                  <div class="p-4 flex flex-col justify-between
+                 dark:bg-gray-200 rounded-lg">
+                    <div class="">
+
+                      <div class="flex items-center mr-4 mb-4 w-full">
+                        <input id="radio-3-1" type="radio" name="radio3" class="hidden" />
+                        <label for="radio-3-1" class="flex items-center cursor-pointer text-xs">
+                          <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+                          LIBERTAÇÃO</label>
+                      </div>
+
+                      <div class="flex items-center mr-4 mb-4 w-full">
+                        <input id="radio-3-2" type="radio" name="radio3" class="hidden" />
+                        <label for="radio-3-2" class="flex items-center cursor-pointer text-xs">
+                          <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+                          PODER</label>
+                      </div>
+
+                      <div class="flex items-center mr-4 mb-4 w-full">
+                        <input id="radio-3-3" type="radio" name="radio3" class="hidden" />
+                        <label for="radio-3-3" class="flex items-center cursor-pointer text-xs">
+                          <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+                          EXCELÊNCIA</label>
+                      </div>
+
+                      <div class="flex items-center mr-4 mb-4 w-full">
+                        <input id="radio-3-4" type="radio" name="radio3" class="hidden" />
+                        <label for="radio-3-4" class="flex items-center cursor-pointer text-xs">
+                          <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+                          AJUDA, e ATENÇÃO</label>
+                      </div>
+
+                      <div class="flex items-center mr-4 mb-4 w-full">
+                        <input id="radio-3-5" type="radio" name="radio3" class="hidden" />
+                        <label for="radio-3-5" class="flex items-center cursor-pointer text-xs">
+                          <span class="w-4 h-4 inline-block mr-2 rounded-full border border-grey flex-no-shrink"></span>
+                          INOVAÇÃO</label>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+              </ul>
+
+              <!-- <a
+              href="/"
+              class="flex justify-center capitalize text-blue-500
+              dark:text-blue-200">
+              <span>see all</span>
+            </a> -->
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </main>
+
+      <aside class="w-1/4 my-1 mr-1 px-6 py-4 flex flex-col bg-gray-200 dark:bg-black
+		dark:text-gray-400 rounded-r-lg overflow-y-auto">
+        <!-- Right side NavBar -->
+
+
+
+        <div id="panel-res" class="mr-6 w-full mt-8 py-2 flex-shrink-0 flex flex-col
+				bg-purple-300 rounded-lg text-white">
+
+          <h3 class="flex items-center pt-1 pb-1 px-8 text-lg font-bold
+					capitalize">
+            <!-- Header -->
+            <span>Somos iguais a:</span>
+
+          </h3>
+          <h3 class="flex items-center pt-1 pb-1 px-8 text-md font-bold
+            capitalize">
+            <!-- Header -->
+            <span id="res"></span>
+
+          </h3>
+
+          <div class="flex flex-col p-3 items-center mt-10">
+            <img src="https://cdni.iconscout.com/illustration/premium/thumb/empty-state-2130362-1800926.png"
+              alt=" empty schedule" />
+
+            <span class="font-bold mt-8">Perfil</span>
+
+            <span id="profile" class="text-purple-500">
+              
+            </span>
+
+
+          </div>
+
+          <div class="flex flex-col p-3 items-center ">
+            <span class="text-gray-800">
+              Saiba mais seu perfil completo e como devemos ser
+            </span>
+
+            <button class="mt-8 bg-purple-800 rounded-lg py-2 px-4">
+              Saiba mais
+            </button>
+          </div>
+
+        </div>
+
+
+
+        <!-- 
+        <div class="mt-4 flex justify-center capitalize text-blue-600">
+          <a href="expenses-dashboard/">see all</a>
+        </div> -->
+
+      </aside>
+
+    </div>
+  </form>
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+
+  <script src="src/page.js"></script>
+</body>
+
+</html>
