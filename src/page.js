@@ -12,17 +12,17 @@ class PageController {
     initialize() {
 
 
-        this.input = addEventListener('change', e => {
-            var cadaInput = e.target;
+        // this.input = addEventListener('change', e => {
+        //     var cadaInput = e.target;
 
-            if (cadaInput.checked) {
-                if ((cadaInput.id == 'radio-1-1') || (cadaInput.id == 'radio-2-1') || (cadaInput.id == 'radio-3-1')) {
-                    this.mudaPanel();
-                }
-            }
+        //     if (cadaInput.checked) {
+        //         if ((cadaInput.id == 'radio-1-1') || (cadaInput.id == 'radio-2-1') || (cadaInput.id == 'radio-3-1')) {
+        //             this.mudaPanel();
+        //         }
+        //     }
 
 
-        })
+        // })
 
     }
     mudaPanel() {
